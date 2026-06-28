@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capstone project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="topnav">
+         <a class="active" href="capstone.html">Home</a>
+         <a href="#">About us</a>
+         <a href="#">Gallery</a>
+         <a href="#">Contact_Us</a>
+     </div>    
+      <h1>liverpool football club.</h1>
+  <p>liverpool is a very popular team in football.</p>
+  <p> liverpool is the 6th place in football right now </p>
+  <P>liverpool is very famous in the world</P>
+
+  <section>
+    <img class="mySlides" src="liverpool 1.jpg" alt="Slide1">
+     <img class="mySlides" src="liverpool.jpg" alt="Slide2">
+     <img class="mySlides" src="liverpool win.jpg" alt="Slide3">
+     <img class="mySlides" src="Liverpool football pic.svg" alt="Slide4">
+  </section>
+
+  <div class="footer">
+   <footer>
+    <p>© All copyright are reserved by lisabett.</p>
+   </footer>
+  </div>
+
+  <script>
+    let myIndex = 0;
+
+    window.onload = function () {
+      carousel();
+    };
+
+    function carousel() {
+      let slides = document.getElementsByClassName("mySlides");
+
+      // hide all slides
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      myIndex++;
+
+      if (myIndex > slides.length) {
+        myIndex = 1;
+      }
+
+      slides[myIndex - 1].style.display = "block";
+
+      setTimeout(carousel, 3000); // change every 3 seconds
+    }
+  </script>
+
+</body>
+</html>
